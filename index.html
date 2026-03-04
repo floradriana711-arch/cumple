@@ -1,17 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Feliz Cumpleaños Mi Amor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Efraín</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff6f91,#ff9671,#ffc75f);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.seccion{
+    padding:60px 20px;
+}
+
+h1{
+    font-size:55px;
+    margin-bottom:10px;
+    animation: aparecer 2s ease-in-out;
+}
+
+h2{
+    font-size:30px;
+}
+
+p{
+    max-width:900px;
+    margin:20px auto;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.card{
+    background: rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    cursor:pointer;
+    background:white;
+    color:#ff4f81;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+.razones{
+    columns:2;
+    max-width:900px;
+    margin:30px auto;
+    font-size:18px;
+    text-align:left;
+}
+
+.heart{
+    position:fixed;
+    top:-10px;
+    font-size:20px;
+    animation: caer linear infinite;
+}
+
+@keyframes caer{
+    0%{transform:translateY(-10px);}
+    100%{transform:translateY(100vh);}
+}
+
+@keyframes aparecer{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
 </head>
-<body style="background:pink; text-align:center; font-family:Arial; color:white; padding:50px;">
 
-<h1>🎉 Feliz Cumpleaños Mi Amor 🎂</h1>
+<body>
 
-<p>Hoy celebro el día en que nació el hombre más especial de mi vida.</p>
+<audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
 
-<p>Te amo muchísimo 💖</p>
+<div class="seccion">
+<h1>🎉 Feliz Cumpleaños Efraín 🎂</h1>
+<h2>Celebrando tus 32 años 💖</h2>
 
-<p>Tu novia 💕</p>
+<div class="card">
+<p>
+Mi amor, hoy celebro la vida del hombre que transformó la mía.
+Desde el 01/09/2020 comenzó nuestra historia,
+y cada día contigo ha sido una bendición.
+</p>
+
+<p id="contador"></p>
+
+<button onclick="mostrarSorpresa()">Haz clic para tu sorpresa 💌</button>
+
+<p id="mensajeExtra" style="display:none; font-size:22px; margin-top:20px;">
+Efraín, gracias por ser mi compañero, mi apoyo y mi alegría.
+Te amo más cada día y quiero celebrar contigo todos los cumpleaños que vienen.
+</p>
+</div>
+</div>
+
+<div class="seccion">
+<h2>📸 Nuestros Momentos</h2>
+<div class="galeria">
+<img src="https://via.placeholder.com/300x300">
+<img src="https://via.placeholder.com/300x300">
+<img src="https://via.placeholder.com/300x300">
+<img src="https://via.placeholder.com/300x300">
+</div>
+<p>(Aquí luego puedes cambiar las fotos por las de ustedes)</p>
+</div>
+
+<div class="seccion">
+<h2>💖 32 Razones por las que te amo</h2>
+<div class="razones">
+1. Por tu sonrisa.<br>
+2. Por tu paciencia.<br>
+3. Por tu apoyo.<br>
+4. Por tu forma de abrazar.<br>
+5. Por tu voz.<br>
+6. Por cómo me cuidas.<br>
+7. Por tu inteligencia.<br>
+8. Por tu humor.<br>
+9. Por tus consejos.<br>
+10. Por tu mirada.<br>
+11. Por tus sueños.<br>
+12. Por tu esfuerzo.<br>
+13. Por tu cariño.<br>
+14. Por tu honestidad.<br>
+15. Por tu lealtad.<br>
+16. Por tu respeto.<br>
+17. Por tu ternura.<br>
+18. Por tu energía.<br>
+19. Por tu valentía.<br>
+20. Por tu compromiso.<br>
+21. Por cómo me motivas.<br>
+22. Por escucharme.<br>
+23. Por creer en mí.<br>
+24. Por tus detalles.<br>
+25. Por tu protección.<br>
+26. Por nuestras risas.<br>
+27. Por nuestros recuerdos.<br>
+28. Por nuestro inicio el 01/09/2020.<br>
+29. Por nuestro presente.<br>
+30. Por nuestro futuro.<br>
+31. Por cada día juntos.<br>
+32. Por ser tú 💕
+</div>
+</div>
+
+<script>
+function calcularTiempo(){
+    const inicio = new Date("2020-09-01");
+    const hoy = new Date();
+    const dias = Math.floor((hoy - inicio)/(1000*60*60*24));
+    document.getElementById("contador").innerHTML =
+    "Llevamos juntos " + dias + " días desde el 01/09/2020 💞";
+}
+calcularTiempo();
+
+function mostrarSorpresa(){
+    document.getElementById("mensajeExtra").style.display="block";
+}
+
+function crearCorazon(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*3+2)+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(crearCorazon,300);
+</script>
 
 </body>
 </html>
