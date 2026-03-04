@@ -9,20 +9,20 @@
 body{
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#ff6f91,#ff9671,#ffc75f);
+    background: linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
     color:white;
     text-align:center;
     overflow-x:hidden;
 }
 
-.seccion{
-    padding:60px 20px;
+section{
+    padding:70px 20px;
 }
 
 h1{
     font-size:55px;
     margin-bottom:10px;
-    animation: aparecer 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h2{
@@ -33,7 +33,7 @@ p{
     max-width:900px;
     margin:20px auto;
     font-size:20px;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .card{
@@ -59,126 +59,129 @@ button:hover{
     transform:scale(1.1);
 }
 
-.galeria{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-    margin-top:30px;
-}
-
-.galeria img{
-    width:100%;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.galeria img:hover{
-    transform:scale(1.05);
-}
-
-.razones{
-    columns:2;
-    max-width:900px;
-    margin:30px auto;
-    font-size:18px;
-    text-align:left;
-}
-
 .heart{
     position:fixed;
     top:-10px;
     font-size:20px;
-    animation: caer linear infinite;
+    animation: fall linear infinite;
 }
 
-@keyframes caer{
+@keyframes fall{
     0%{transform:translateY(-10px);}
     100%{transform:translateY(100vh);}
 }
 
-@keyframes aparecer{
+@keyframes fadeIn{
     from{opacity:0;}
     to{opacity:1;}
+}
+
+.typewriter{
+    border-right: 3px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 6s steps(60,end) forwards, blink 1s infinite;
+}
+
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{border-color:transparent}
 }
 </style>
 </head>
 
 <body>
 
-<audio autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
-
-<div class="seccion">
+<section>
 <h1>🎉 Feliz Cumpleaños Efraín 🎂</h1>
-<h2>Celebrando tus 32 años 💖</h2>
+<h2>Hoy celebramos tus 32 años 💖</h2>
 
 <div class="card">
+
+<p class="typewriter">
+Desde el 01/09/2020 comenzó nuestra historia…
+</p>
+
 <p>
-Mi amor, hoy celebro la vida del hombre que transformó la mía.
-Desde el 01/09/2020 comenzó nuestra historia,
-y cada día contigo ha sido una bendición.
+Mi amor, desde ese día mi vida cambió completamente.
+Llegaste para enseñarme lo que es el amor verdadero,
+la paciencia, la compañía sincera y el apoyo incondicional.
+</p>
+
+<p>
+Hoy celebramos no solo tus 32 años,
+sino la increíble persona que eres.
+Tu esfuerzo, tu valentía, tu forma de cuidar,
+tu manera de abrazar y tu sonrisa que ilumina mis días.
+</p>
+
+<p>
+Gracias por cada momento compartido,
+por cada risa, cada conversación profunda,
+cada sueño que construimos juntos.
 </p>
 
 <p id="contador"></p>
 
-<button onclick="mostrarSorpresa()">Haz clic para tu sorpresa 💌</button>
+<button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
 
 <p id="mensajeExtra" style="display:none; font-size:22px; margin-top:20px;">
-Efraín, gracias por ser mi compañero, mi apoyo y mi alegría.
-Te amo más cada día y quiero celebrar contigo todos los cumpleaños que vienen.
+Efraín, prometo seguir caminando contigo,
+celebrando cada logro, superando cada reto
+y construyendo el futuro que soñamos.
+Te amo hoy, mañana y siempre. 💕
 </p>
-</div>
-</div>
 
-<div class="seccion">
-<h2>📸 Nuestros Momentos</h2>
-<div class="galeria">
-<img src="https://via.placeholder.com/300x300">
-<img src="https://via.placeholder.com/300x300">
-<img src="https://via.placeholder.com/300x300">
-<img src="https://via.placeholder.com/300x300">
 </div>
-    
-<div class="seccion">
+</section>
+
+<section>
 <h2>💖 32 Razones por las que te amo</h2>
-<div class="razones">
+
+<p>
 1. Por tu sonrisa.<br>
 2. Por tu paciencia.<br>
 3. Por tu apoyo.<br>
-4. Por tu forma de abrazar.<br>
-5. Por tu voz.<br>
-6. Por cómo me cuidas.<br>
-7. Por tu inteligencia.<br>
-8. Por tu humor.<br>
-9. Por tus consejos.<br>
-10. Por tu mirada.<br>
-11. Por tus sueños.<br>
-12. Por tu esfuerzo.<br>
-13. Por tu cariño.<br>
-14. Por tu honestidad.<br>
-15. Por tu lealtad.<br>
-16. Por tu respeto.<br>
-17. Por tu ternura.<br>
+4. Por tu forma de protegerme.<br>
+5. Por tu inteligencia.<br>
+6. Por tu voz.<br>
+7. Por tus abrazos.<br>
+8. Por tus consejos.<br>
+9. Por tu esfuerzo diario.<br>
+10. Por tu lealtad.<br>
+11. Por tu respeto.<br>
+12. Por tu ternura.<br>
+13. Por tu disciplina.<br>
+14. Por tu compromiso.<br>
+15. Por cómo me miras.<br>
+16. Por cómo me escuchas.<br>
+17. Por tu humor.<br>
 18. Por tu energía.<br>
 19. Por tu valentía.<br>
-20. Por tu compromiso.<br>
-21. Por cómo me motivas.<br>
-22. Por escucharme.<br>
-23. Por creer en mí.<br>
-24. Por tus detalles.<br>
-25. Por tu protección.<br>
-26. Por nuestras risas.<br>
-27. Por nuestros recuerdos.<br>
+20. Por nuestros recuerdos.<br>
+21. Por nuestros planes.<br>
+22. Por nuestros sueños.<br>
+23. Por cada día juntos.<br>
+24. Por enseñarme tanto.<br>
+25. Por tu apoyo incondicional.<br>
+26. Por tu honestidad.<br>
+27. Por tu bondad.<br>
 28. Por nuestro inicio el 01/09/2020.<br>
-29. Por nuestro presente.<br>
-30. Por nuestro futuro.<br>
-31. Por cada día juntos.<br>
-32. Por ser tú 💕
-</div>
-</div>
+29. Por nuestro presente hermoso.<br>
+30. Por nuestro futuro brillante.<br>
+31. Por cada meta que lograremos.<br>
+32. Por ser simplemente tú 💕
+</p>
+
+</section>
 
 <script>
+// Contador de días juntos
 function calcularTiempo(){
     const inicio = new Date("2020-09-01");
     const hoy = new Date();
@@ -188,10 +191,12 @@ function calcularTiempo(){
 }
 calcularTiempo();
 
-function mostrarSorpresa(){
+// Botón sorpresa
+function mostrarMensaje(){
     document.getElementById("mensajeExtra").style.display="block";
 }
 
+// Corazones animados
 function crearCorazon(){
     const heart=document.createElement("div");
     heart.classList.add("heart");
